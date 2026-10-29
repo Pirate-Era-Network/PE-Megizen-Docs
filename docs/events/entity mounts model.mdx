@@ -1,0 +1,24 @@
+---
+sidebar_custom_props:
+    description: When an entity is mounting a model, either as a driver or a passenger.
+---
+#
+```js
+meg <entity> mounts <'model'>
+```
+
+<Event cancellable />
+
+This event is fired when a player interacts with a ModelEngine model.
+
+## Contexts
+
+| Context                | Description                                                                            |
+| ---------------------- | -------------------------------------------------------------------------------------- |
+| `<context.model>`      | returns the MegActiveModelTag of the model that the entity is mounting.                |
+| `<context.entity>`     | returns the EntityTag of the entity that is mounting the model.                        |
+| `<context.is_driver>`  | returns a ElementTag(Boolean) of whether the entity is mounting the model as a driver. |
+
+{/*
+TODO: Add examples
+*/}

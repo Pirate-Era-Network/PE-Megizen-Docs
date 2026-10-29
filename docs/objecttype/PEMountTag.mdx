@@ -1,0 +1,133 @@
+---
+sidebar_custom_props:
+    description: Represents a pemount entity.
+---
+
+# PEMountTag
+
+<ObjectType
+    name="PEMountTag"
+    prefix="pemount@"
+    identityFormat={
+        <>
+            Identified using the format <code>pemount@&lt;uuid&gt;</code>.
+            For example, <code>pemount@1234-1234-1234</code>.
+        </>
+    }
+    description={<>A PEMountTag represents a pemount entity in the world.</>}
+    seeAlso={[
+        <a href="/PE-Megizen-Docs/command/pemount">pemount</a>
+    ]}
+/>
+
+## Tags
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.mount_info`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag</code>}
+        Description={<>Returns the current mount settings as a map.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.mount_string`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag</code>}
+        Description={<>Returns the mount settings as a formatted string.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.driver`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={<>Returns the driver of the mount. Empty when the mount has no driver.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={<>Returns the entity of the pemount.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.is_moving`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={<>Returns whether the mount is moving.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.is_flying`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={<>Returns whether the mount is flying.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.is_swimming`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={<>Returns whether the mount is swimming.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.current_state`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag</code>}
+        Description={<>Returns the animation state the mount is in.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.can_move`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={<>Returns whether the mount can currently move.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.passengers`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ListTag</code>}
+        Description={<>Returns the passengers currently on the mount.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `PEMountTag.has_passengers`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={<>Returns whether the mount has passengers.</>}
+    />
+</MetaEntry>

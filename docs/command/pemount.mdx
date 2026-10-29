@@ -1,0 +1,36 @@
+---
+sidebar_custom_props:
+    description: Writes settings on a PEMount.
+---
+
+# `pemount`
+
+```js
+pemount mounttag:<PEMountTag> variables:<names> values:<values>
+```
+
+Writes settings on a PEMount. The command takes three prefixed arguments. `mounttag` is the mount. `variables` is a list of setting names. `values` is a list of values in the same order.
+
+The parser does not accept a bare uuid and a `name:value` pair. Each argument needs its prefix.
+
+Settings include `landSpeed`, `waterSpeed`, `airSpeed`, and `canFly`. Animation speeds are `walkAnimationSpeed`, `swimAnimationSpeed`, and `flyAnimationSpeed`. Writing an animation speed refreshes the current animation state. Other names are fields on the mount settings, such as `canMove`, `jumpHeight`, `waterYSpeed`, and `airYSpeed`.
+
+## Arguments
+
+| Argument  | Input      | Required | Default | Description                                                        |
+| --------- | ---------- | -------- | ------- | ------------------------------------------------------------------ |
+| mounttag  | PEMountTag | yes      |         | The mount to change.                                               |
+| variables | ListTag    | yes      |         | Setting names to write.                                            |
+| values    | ListTag    | yes      |         | Values for those settings, in the same order as `variables`.       |
+
+## Examples
+
+```yml
+# Raise land speed and allow flight.
+- pemount mounttag:<context.entity.pe_mount> variables:landSpeed|canFly values:1.5|true
+```
+
+## See Also
+
+- Object Type: <a href="/PE-Megizen-Docs/objecttype/PEMountTag"> `PEMountTag`</a>
+- Command: <a href="/PE-Megizen-Docs/command/megmount"> `megmount`</a>

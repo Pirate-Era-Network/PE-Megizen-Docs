@@ -1,0 +1,29 @@
+---
+sidebar_custom_props:
+    description: When a rider sits on a pemount.
+---
+
+# `pemount mounted`
+
+```js
+pemount mounted
+```
+
+This event fires when a rider sits on a pemount. The Megizen `meg <entity> mounts <'model'>` event still fires beside it.
+
+`as_driver` is the steering driver. A passenger sit leaves it false. `<context.driver>` is the rider who just sat, and that rider can be a passenger.
+
+## Contexts
+
+| Context                | Description                                                                 |
+| ---------------------- | --------------------------------------------------------------------------- |
+| `<context.mount>`      | returns the PEMountTag of the entity that was just sat on.                 |
+| `<context.entity>`     | returns the EntityTag of that mount.                                        |
+| `<context.driver>`     | returns the EntityTag of the rider who just sat. This can be a passenger.  |
+| `<context.as_driver>`  | returns an ElementTag(Boolean). True when this sit is the steering driver. |
+| `<context.passengers>` | returns a ListTag of the passengers already on the mount.                  |
+
+## See Also
+
+- Event: <a href="/PE-Megizen-Docs/events/entity%20mounts%20model"> `meg <entity> mounts <'model'>`</a>
+- Object Type: <a href="/PE-Megizen-Docs/objecttype/PEMountTag"> `PEMountTag`</a>

@@ -1,0 +1,626 @@
+---
+sidebar_custom_props:
+    description: Represents an active model on an entity.
+---
+# MegActiveModelTag
+
+<ObjectType
+    name="MegActiveModelTag"
+    prefix="megactivemodel@"
+    identityFormat={
+        <>
+            Identified using the format <code>{"megactivemodel@<entity>,<model_blueprint>"}</code>.
+        </>
+    }
+    description={
+        <>
+            Represents an active model on an entity.
+        </>
+    }
+/>
+
+## Tags
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.bone[<id>]`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegBoneTag</code>}
+        Description={
+            <>
+                Returns the bone with the specified id of the model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.bones`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag(MegBoneTag)</code>}
+        Description={
+            <>
+                Returns a map of all the bones of the model, with the bone id as the key and the bone as the value.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.can_drive`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagcan_drive">
+                <code>can_drive</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the active model can be driven.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.can_ride`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagcan_ride">
+                <code>can_ride</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the active model can be ridden.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.damage_tint`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagdamage_tint">
+                <code>damage_tint</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the damage tint of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.default_tint`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagdefault_tint">
+                <code>default_tint</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the default tint of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.driver`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={
+            <>
+                Returns a EntityTag of the driver of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.driver_bone`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegBoneTag</code>}
+        Description={
+            <>
+                Returns a MegBoneTag of the driver bone of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.glow_color`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagglow_color">
+                <code>glow_color</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the glow color of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.has_passengers`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the active model has passengers.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.has_riders`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns a ElementTag(Boolean) of whether the active model has riders.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.hitbox_scale`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>LocationTag</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltaghitbox_scale">
+                <code>hitbox_scale</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the scale of the active model's hitbox as a vector.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.hitbox_visible`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltaghitbox_visible">
+                <code>hitbox_visible</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the hitbox of the active model is visible.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.lock_yaw`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltaglock_yaw">
+                <code>lock_yaw</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the yaw of the active model is locked.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.lock_pitch`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(boolean)</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltaglock_pitch">
+                <code>lock_pitch</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns whether the pitch of the active model is locked.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.modeled_entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegModeledEntityTag</code>}
+        Description={
+            <>
+                Returns the modeled entity of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.name`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag</code>}
+        Description={
+            <>
+                Returns the name of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.passengers`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ListTag(EntityTag)</code>}
+        Description={
+            <>
+                Returns a ListTag(EntityTag) of the passengers currently on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.scale`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>LocationTag</code>}
+        Mechanism={
+            <a href="#mech-megactivemodeltagscale">
+                <code>scale</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the scale of the active model as a vector.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.seats`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ListTag(ElementTag)</code>}
+        Description={
+            <>
+                Returns a ListTag of seats on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegActiveModelTag.seats`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag</code>}
+        Description={
+            <>
+                Returns a MapTag of entities on the active model, if any.
+                Keys will be the bones entities are mounted on, while the values of those keys will be the entities themselves.
+                Only returns the bones of entities who are mounted on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+## Mechanisms
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.can_drive`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the active model can be driven.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagcan_drive">
+                <code>MegActiveModelTag.can_drive</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.can_ride`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the active model can be ridden.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagcan_ride">
+                <code>MegActiveModelTag.can_ride</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.damage_tint`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the damage tint of the active model.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagdamage_tint">
+                <code>MegActiveModelTag.damage_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.dismount_all`
+    </EntryHeader>
+    <DetailsTable
+        Description={
+            <>
+                Dismounts everyone mounted on the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.dismount_driver`
+    </EntryHeader>
+    <DetailsTable
+        Description={
+            <>
+                Dismounts the driver of the active model.
+            </>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.default_tint`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the default tint of the active model.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagdefault_tint">
+                <code>MegActiveModelTag.default_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.glow_color`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the glow color of the active model.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagglow_color">
+                <code>MegActiveModelTag.glow_color</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.hitbox_scale`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Decimal)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the scale of the active model's hitbox.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltaghitbox_scale">
+                <code>MegActiveModelTag.hitbox_scale</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.hitbox_visible`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the hitbox of the active model is visible.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltaghitbox_visible">
+                <code>MegActiveModelTag.hitbox_visible</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.lock_pitch`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the pitch of the active model is locked.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltaglock_pitch">
+                <code>MegActiveModelTag.lock_pitch</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.lock_yaw`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets whether the yaw of the active model is locked.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltaglock_yaw">
+                <code>MegActiveModelTag.lock_yaw</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegActiveModelTag.scale`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Decimal)</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the scale of the active model.
+            </>
+        }
+        Tags={
+            <a href="#tag-megactivemodeltagscale">
+                <code>MegActiveModelTag.scale</code>
+            </a>
+        }
+    />
+</MetaEntry>

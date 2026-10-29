@@ -1,0 +1,4 @@
+label: Events
+position: 5
+customProps:
+  description: Custom events introduced in Megizen

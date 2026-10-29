@@ -1,0 +1,83 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #414715;
+    --ifm-color-primary-dark: #3a4013;
+    --ifm-color-primary-darker: #373c12;
+    --ifm-color-primary-darkest: #2d320f;
+    --ifm-color-primary-light: #484e17;
+    --ifm-color-primary-lighter: #4b5218;
+    --ifm-color-primary-lightest: #545c1b;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+    --ifm-color-primary: #efff75;
+    --ifm-color-primary-dark: #ebff50;
+    --ifm-color-primary-darker: #e9ff3d;
+    --ifm-color-primary-darkest: #e2ff05;
+    --ifm-color-primary-light: #f3ff9a;
+    --ifm-color-primary-lighter: #f5ffad;
+    --ifm-color-primary-lightest: #fcffe5;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .DocSearch {
+    --docsearch-hit-background: var(--ifm-menu-color-background-active) !important;
+    --docsearch-hit-active-color: var(--ifm-color-primary) !important;
+    --docsearch-hit-color: var(--ifm-font-color-base) !important;
+}
+
+[data-theme="dark"] .DocSearch-Hit[aria-selected=true] a {
+    background-color: var(--ifm-menu-color-background-active) !important;
+}
+
+td {
+    padding: 0 16px 0 0;
+}
+
+.entrybox {
+    border-radius: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.entryboxHeader {
+    border-radius: 8px 8px 0 0;
+    background-color: var(--ifm-background-surface-color);
+    padding: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--ifm-color-primary);
+}
+
+.entryboxBody {
+    padding: 8px;
+}
+
+.entryboxBody td {
+    padding: 0 16px 0 0;
+}
+
+@font-face {
+    font-family: "CA Gingermint";
+    src: url("/font/ca_gingermint.eot");
+    src: url("/font/ca_gingermint.eot?#iefix") format("embedded-opentype"), url("/font/ca_gingermint.woff2") format("woff2"),
+        url("/font/ca_gingermint.woff") format("woff"), url("/font/ca_gingermint.ttf") format("truetype"),
+        url("/font/ca_gingermint.svg#ca_gingermintregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.megizenTitle {
+    font-family: "CA Gingermint", sans-serif;
+    color: var(--ifm-color-primary);
+    text-align: center;
+}

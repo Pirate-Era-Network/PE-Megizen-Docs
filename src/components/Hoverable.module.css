@@ -1,0 +1,31 @@
+.hovered {
+    background-color: var(--ifm-dropdown-background-color);
+    border-radius: var(--ifm-global-radius);
+    box-shadow: var(--ifm-global-shadow-md);
+    opacity: 0;
+    overflow-y: auto;
+    padding: 0.5rem;
+    position: absolute;
+
+    /* set width */
+    max-width: 100%;
+    min-width: max-content;
+
+    top: calc(100% - var(--ifm-navbar-item-padding-vertical) + 0.3rem);
+    transform: translateY(-0.625rem);
+    visibility: hidden;
+
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+
+    z-index: 1000;
+}
+
+/* The class that has the hovered element + the actual content */
+.hoverable {
+    position: relative;
+}
+
+.hoverable:hover .hovered {
+    opacity: 1;
+    visibility: visible;
+}

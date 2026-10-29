@@ -1,0 +1,50 @@
+---
+sidebar_custom_props:
+    description: When a player interacts with ModelEngine model.
+---
+#
+```js
+meg player interacts with <'model'>
+```
+
+<Event cancellable hasLocation hasPlayer />
+
+This event is fired when a player interacts with a ModelEngine model.
+
+## Switches
+
+| Switch            | Description                                                 |
+| ----------------- | ----------------------------------------------------------- |
+| `action:<action>` | Only processes the event if a specific action is performed. |
+
+:::warning
+
+This event may in some cases double-fire, requiring usage of the [ratelimit](https://meta.denizenscript.com/Docs/Commands/ratelimit) command (i.e. `- ratelimit <player> 1t`) to prevent double-firing.
+
+:::
+
+## Contexts
+
+| Context                    | Description                                                                                                   |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `<context.action>`         | returns a ElementTag of the interaction cause. Can be: ATTACK, INTERACT or INTERACT_ON.                       |
+| `<context.active_model>`   | returns a MegActiveModelTag of the model.                                                                     |
+| `<context.click_position>` | returns a LocationTag of the click position (as a world-less vector, relative to the model's center), if any. |
+| `<context.item>`           | returns the ItemTag of the item used to interact with the model.                                              |
+| `<context.is_secondary>`   | returns a ElementTag(Boolean) of whether the player was crouching when interacting with the model.            |
+
+## Examples
+
+```yml
+# Play the 'happy' animation whenever a player pets a capybara :)
+on meg player interacts with capybara:
+- ratelimit <player> 1t
+- megstate model:<player.target> state:happy
+```
+
+```yml
+# Get angry if a player attacks a capybara.
+on meg player interacts with capybara action:ATTACK:
+- ratelimit <player> 1t
+- narrate "Hey!! Don't hurt the capybara! :("
+```

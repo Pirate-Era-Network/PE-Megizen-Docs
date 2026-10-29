@@ -1,0 +1,29 @@
+---
+sidebar_custom_props:
+    description: When a rider leaves a pemount.
+---
+
+# `pemount dismounted`
+
+```js
+pemount dismounted
+```
+
+This event fires when a rider leaves a pemount. The event only matches when that mount has a pemount controller.
+
+`<context.driver>` is the rider who left. `<context.as_driver>` is true when that rider was the steering driver.
+
+## Contexts
+
+| Context                | Description                                                                          |
+| ---------------------- | ------------------------------------------------------------------------------------ |
+| `<context.mount>`      | returns the PEMountTag of the mount that was dismounted.                            |
+| `<context.entity>`     | returns the EntityTag of that mount.                                                 |
+| `<context.driver>`     | returns the EntityTag of the rider who left.                                         |
+| `<context.passengers>` | returns a ListTag of the passengers on the mount.                                   |
+| `<context.as_driver>`  | returns an ElementTag(Boolean) of whether the rider who left was steering.          |
+
+## See Also
+
+- Event: <a href="/PE-Megizen-Docs/events/pemount%20mounted"> `pemount mounted`</a>
+- Object Type: <a href="/PE-Megizen-Docs/objecttype/PEMountTag"> `PEMountTag`</a>

@@ -1,0 +1,109 @@
+---
+sidebar_position: 3
+sidebar_custom_props:
+    description: Additional tags introduced in Megizen.
+---
+
+# Tags
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `EntityTag.modeled_entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegModeledEntityTag</code>}
+        Description={
+            <>
+                Returns the modeled entity of the entity, if any.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `EntityTag.mounted_bone`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegBoneTag</code>}
+        Description={
+            <>
+                Returns the MegBoneTag that the entity is mounted on, if any.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.meg_forced_invisible`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player has been forcefully turned invisible by either the megmodel command or by ModelEngine.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `EntityTag.is_pe_mount`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the entity is a pemount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `EntityTag.pe_mount`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>PEMountTag</code>}
+        Description={
+            <>
+                Returns the PEMountTag of the entity when it is a pemount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.is_driver`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player is currently driving a mount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.is_passenger`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player is currently a passenger of a mount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.mount`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>PEMountTag</code>}
+        Description={
+            <>
+                Returns the PEMountTag of the vehicle the player is riding.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.mount_entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={
+            <>
+                Returns the entity of the vehicle the player is riding.
+            </>
+        }
+    />
+</MetaEntry>

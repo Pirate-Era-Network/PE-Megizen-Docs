@@ -1,0 +1,61 @@
+---
+sidebar_custom_props:
+    description: Mounts or dismounts an entity on a model.
+---
+
+# `megmount`
+
+```js
+megmount [entity:<entity>] [model:<active_model>] [type:driver/passenger] (bones:<bone>|...) (dismount) (force) (interactable) (damageable) (auto_dismount) (controller_type:{walking}/flying/walking_force/flying_force/pemount) (controller_script:<script>)
+```
+
+Mounts the given entity on the given modeled entity as the driver or as a passenger.
+
+`type:driver` sits the entity in the driver seat. `type:passenger` sits them on one of the named bones. `bones` is required for a passenger. Bone names come from the model in Blockbench. More info is here: https://git.lumine.io/mythiccraft/model-engine-4/-/wikis/Modeling/Bone-Behaviors#mount
+
+`controller_type` defaults to `walking`. The other values are `flying`, `walking_force`, `flying_force`, and `pemount`. `controller_type:pemount` is the land, water, and fly controller (`PEMount.CUSTOM`). Passengers omit `controller_type` and stay on `walking`. A `controller_script` supplies its own controller, and `controller_type` is not used.
+
+`interactable` and `damageable` stay switches. They mark whether the rider can interact with the mount and damage it.
+
+If this entity is already mounted and `auto_dismount` is omitted, the command returns. With `auto_dismount`, it dismounts them first, then continues.
+
+A second driver sit on the same rider returns before dismount. If that entity is already the driver of this model, the command returns and leaves them seated.
+
+`dismount` dismounts the entity instead of mounting them. `force` applies to passengers and picks the least occupied bone. Without `force`, the first unoccupied bone in the list is used.
+
+The older `driver` and `passenger` switches still select the mode.
+
+## Arguments
+
+| Argument          | Input             | Required                      | Default | Description                                                                                                      |
+| ----------------- | ----------------- | ----------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| entity            | EntityTag         | yes                           |         | The entity that will be mounted on the model.                                                                    |
+| model             | MegActiveModelTag | yes                           |         | The model to mount the entity to.                                                                                |
+| type              | driver/passenger  | yes                           | driver  | Whether this entity sits as the driver or as a passenger.                                                        |
+| bones             | ListTag           | yes for a passenger           |         | Bones the passenger can sit on.                                                                                  |
+| dismount          | N/A               | no                            |         | Dismount the entity instead of mounting them.                                                                    |
+| force             | N/A               | no                            | false   | For a passenger, pick the least occupied bone.                                                                   |
+| interactable      | N/A               | no                            | false   | Whether this rider can interact with the mount.                                                                 |
+| damageable        | N/A               | no                            | false   | Whether this rider can damage the mount.                                                                         |
+| auto_dismount     | N/A               | no                            | false   | If the entity is already mounted, dismount them first. Otherwise the command returns.                           |
+| controller_type   | ElementTag        | no                            | walking | `walking`, `flying`, `walking_force`, `flying_force`, or `pemount`. Passengers omit this and stay on `walking`. |
+| controller_script | ScriptTag         | no                            |         | A script that supplies the mount controller. When set, `controller_type` is not used.                            |
+
+## Examples
+
+```yml
+# Sit the player as the driver of a land, water, and fly mount.
+on meg player interacts with my_vehicle_model:
+- megmount entity:<player> model:<context.active_model> type:driver controller_type:pemount interactable
+```
+
+```yml
+# Sit a passenger on the first free seat. controller_type stays walking.
+- megmount entity:<player> model:<context.active_model> type:passenger bones:seat_1|seat_2
+```
+
+## See Also
+
+- Object Type: <a href="/PE-Megizen-Docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a>
+- Object Type: <a href="/PE-Megizen-Docs/objecttype/PEMountTag"> `PEMountTag`</a>
+- Command: <a href="/PE-Megizen-Docs/command/pemount"> `pemount`</a>

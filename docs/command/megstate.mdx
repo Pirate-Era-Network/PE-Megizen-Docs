@@ -1,0 +1,62 @@
+---
+sidebar_custom_props:
+    description: Plays a state on a modeled entity.
+---
+
+# `megstate`
+
+```js
+megstate [model:<active_model>] [state:<state>] ((speed:<#.#>/{1}) (lerp_in:<duration>/{0}) (lerp_out:<duration>/{0}) (loop:once/loop/hold) (override:true/false) (force)/remove (ignore_lerp) (priority:<#>/{1}))
+```
+
+Plays a state on a modeled entity.
+This command is similar to the "state" Mythic Mechanic.
+The documentation can be found <a href="https://git.lumine.io/mythiccraft/model-engine-4/-/wikis/MythicMobs/mechanics/model/State">here</a>.
+
+If the 'remove' argument is specified, the state will be removed. If the 'state' argument is not specified, all states will be removed.
+
+## Arguments
+
+| Argument | Input               | Required | Default | Description                                                                                       |
+| -------- | ------------------- | -------- | ------- | ------------------------------------------------------------------------------------------------- |
+| model    | MegActiveModelTag   | yes      |         | The entity to play the state on.                                                                  |
+| priority | ElementTag(Integer) | no       | 1       | Remove the animation of the specified priority, or adds an animation with the specified priority. |
+
+### If `remove` is not specified
+
+If `remove` is not specified, the command will play a state on the entity.
+
+| Argument | Input                | Required | Default | Description                                                                                                   |
+| -------- | -------------------- | -------- | ------- | ------------------------------------------------------------------------------------------------------------- |
+| state    | ElementTag           | yes      |         | The state to play.                                                                                            |
+| speed    | ElementTag           | no       | 1       | The speed multiplier of the animation.                                                                        |
+| lerp_in  | DurationTag          | no       | 0       | The lerp in duration; transition when the animation starts.                                                   |
+| lerp_out | DurationTag          | no       | 0       | The lerp out duration; transition when the animation ends.                                                    |
+| loop     | `once`/`loop`/`hold` | no       |         | The loop type of the animation. If not set, will use the default animation loop mode specified on blockbench. |
+| override | ElementTag           | no       | false   | Whether the animation should override the current animation.                                                  |
+
+### If `remove` is specified
+
+If `remove` is specified, the command will remove a state from the entity.
+
+| Argument    | Input               | Required | Default | Description                                                                 |
+| ----------- | ------------------- | -------- | ------- | --------------------------------------------------------------------------- |
+| state       | ElementTag          | no       |         | The state to remove. If unspecified, will remove all states.                |
+| ignore_lerp | ElementTag(Boolean) | no       | false   | Whether the state should be instantly removed without transition (lerping). |
+
+## Examples
+
+```yml
+# Play the "wave" state on the entity the player's looking at, with a 0.5 second lerp in and out.
+- megstate model:<player.target> state:wave lerp_in:0.5s lerp_out:0.5s
+```
+
+```yml
+# Removes the "wave" state from the entity the player's looking at.
+- megstate model:<player.target> state:wave remove
+```
+
+```yml
+# Removes all states from the entity the player's looking at.
+- megstate model:<player.target> remove
+```

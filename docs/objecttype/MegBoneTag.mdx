@@ -1,0 +1,301 @@
+---
+sidebar_custom_props:
+    description: Represents a bone on a model.
+---
+# MegBoneTag
+
+<ObjectType
+    name="MegBoneTag"
+    prefix="megbonetag@"
+    identityFormat={
+        <>
+            Identified using the format <code>{"megbonetag@<entity>,<model_blueprint>,<bone_id>"}</code>.
+        </>
+    }
+    description={<>Represents a bone on a model.</>}
+/>
+
+## Tags
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.children`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MapTag(MegBoneTag)</code>}
+        Description={<>Returns a map of all the children of the bone, with the bone id as the key and the bone as the value.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.damage_tint`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagdamage_tint">
+                <code>damage_tint</code>
+            </a>
+        }
+        Description={<>Returns the damage tint of the bone.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.default_tint`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagdefault_tint">
+                <code>damage_tint</code>
+            </a>
+        }
+        Description={<>Returns the default tint of the bone.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.global_position`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>LocationTag</code>}
+        Description={<>Returns the position of the bone as a vector.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.glow_color`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ColorTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagglow_color">
+                <code>glow_color</code>
+            </a>
+        }
+        Description={<>Returns the glow color of the bone.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.id`
+    </EntryHeader>
+    <DetailsTable Returns={<code>ElementTag</code>} Description={<>Returns the id of the bone.</>} />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.item`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ItemTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagitem">
+                <code>item</code>
+            </a>
+        }
+        Description={<>Returns the underlying item that the bone uses.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.is_glowing`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Mechanism={
+            <a href="#mech-megbonetagis_glowing">
+                <code>is_glowing</code>
+            </a>
+        }
+        Description={<>Returns whether the bone is glowing.</>}
+    />
+</MetaEntry>
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.location`
+    </EntryHeader>
+    <DetailsTable Returns={<code>LocationTag</code>} Description={<>Returns the location of the bone.</>} />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.scale`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>LocationTag</code>}
+        Mechanism={
+            <a href="#mech-megbonetagscale">
+                <code>scale</code>
+            </a>
+        }
+        Description={<>Returns the scale of the bone as a vector.</>}
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `MegBoneTag.skin_texture`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag</code>}
+        Mehcanism={
+            <a href="#mech-megbonetagskin_texture">
+                <code>skin_texture</code>
+            </a>
+        }
+        Description={
+            <>
+                Returns the skin texture of the bone. Returns null if the bone doesn't have a skin texture. The format is{" "}
+                <code>UUID|Texture|Name</code>.
+            </>
+        }
+    />
+</MetaEntry>
+
+## Mechanisms
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.damage_tint`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={<>Sets the damage tint of the bone.</>}
+        Tags={
+            <a href="#tag-megbonetagdamage_tint">
+                <code>MegBoneTag.damage_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.default_tint`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={<>Sets the default tint of the bone.</>}
+        Tags={
+            <a href="#tag-megbonetagdefault_tint">
+                <code>MegBoneTag.default_tint</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.glow_color`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ColorTag</code>
+            </>
+        }
+        Description={<>Sets the glow color of the bone.</>}
+        Tags={
+            <a href="#tag-megbonetagglow_color">
+                <code>MegBoneTag.glow_color</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.item`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ItemTag</code>
+            </>
+        }
+        Description={<>Sets the underlying item that the bone uses. Shouldn't be used unless you know what you're doing.</>}
+        Tags={
+            <a href="#tag-megbonetagitem">
+                <code>MegBoneTag.item</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.is_glowing`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Boolean)</code>
+            </>
+        }
+        Description={<>Sets whether the bone is glowing..</>}
+        Tags={
+            <a href="#tag-megbonetagis_glowing">
+                <code>MegBoneTag.is_glowing</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.scale`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag(Number)</code>
+            </>
+        }
+        Description={<>Sets the scale of the bone.</>}
+        Tags={
+            <a href="#tag-megbonetagscale">
+                <code>MegBoneTag.scale</code>
+            </a>
+        }
+    />
+</MetaEntry>
+
+<MetaEntry>
+    <EntryHeader>
+    ### Mech: `MegBoneTag.skin_texture`
+    </EntryHeader>
+    <DetailsTable
+        Input={
+            <>
+                <code>ElementTag</code>
+            </>
+        }
+        Description={
+            <>
+                Sets the skin texture of the bone.
+                The format is <code>UUID|Texture|Name</code>.
+            </>
+        }
+        Tags={
+            <a href="#tag-megbonetagskin_texture">
+                <code>MegBoneTag.skin_texture</code>
+            </a>
+        }
+    />
+</MetaEntry>

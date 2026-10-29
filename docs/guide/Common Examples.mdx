@@ -1,0 +1,16 @@
+# Common Examples
+
+## Applying a player skin to a model
+
+```yml
+doppleganger_world:
+    type: world
+    events:
+        after doppleganger spawns:
+        - define entity <context.entity>
+        - define player <[entity].find_players_within[30].first.if_null[<server.online_players.random>].if_null[null]>
+        - if <[player]> == null:
+            - stop
+        - define bones <[entity].modeled_entity.model.bones.values>
+        - adjust <[bones]> skin_texture:<[player].skin_blob>
+```
