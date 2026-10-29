@@ -4,33 +4,33 @@
  * work well for content-centric websites.
  */
 
-/* Shared Pirate Era docs palette. Ink on light pages, sand on dark pages. */
+/* Shared Pirate Era docs palette. Flamingo pink, kept dark enough to read. */
 :root {
-    --ifm-color-primary: #234056;
-    --ifm-color-primary-dark: #1f3a4d;
-    --ifm-color-primary-darker: #1d3649;
-    --ifm-color-primary-darkest: #182d3c;
-    --ifm-color-primary-light: #27465f;
-    --ifm-color-primary-lighter: #294a65;
-    --ifm-color-primary-lightest: #305575;
+    --ifm-color-primary: #c4316c;
+    --ifm-color-primary-dark: #b02c61;
+    --ifm-color-primary-darker: #a62a5c;
+    --ifm-color-primary-darkest: #89224c;
+    --ifm-color-primary-light: #ca4680;
+    --ifm-color-primary-lighter: #cd5186;
+    --ifm-color-primary-lightest: #d66b99;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 .navbar--dark {
-    --ifm-navbar-background-color: #1c3344;
-    --ifm-navbar-link-color: #f4efe6;
-    --ifm-navbar-link-hover-color: #e2c49a;
+    --ifm-navbar-background-color: #5c2040;
+    --ifm-navbar-link-color: #ffe8f2;
+    --ifm-navbar-link-hover-color: #ff9ec8;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-    --ifm-color-primary: #e2c49a;
-    --ifm-color-primary-dark: #d9b480;
-    --ifm-color-primary-darker: #d5ac73;
-    --ifm-color-primary-darkest: #c9954d;
-    --ifm-color-primary-light: #ebd4b4;
-    --ifm-color-primary-lighter: #eedcc0;
-    --ifm-color-primary-lightest: #f6ead8;
+    --ifm-color-primary: #f5b3cf;
+    --ifm-color-primary-dark: #f39ac3;
+    --ifm-color-primary-darker: #f28cbc;
+    --ifm-color-primary-darkest: #ee6aa8;
+    --ifm-color-primary-light: #f7c2d8;
+    --ifm-color-primary-lighter: #f8cce0;
+    --ifm-color-primary-lightest: #fbe4ef;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
