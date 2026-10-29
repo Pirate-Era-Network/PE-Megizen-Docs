@@ -55,10 +55,7 @@ const config: Config = {
         image: "img/docusaurus-social-card.jpg",
         navbar: {
             title: "PE-Megizen Docs",
-            logo: {
-                alt: "PE-Megizen Docs Logo",
-                src: "img/logo.png",
-            },
+            style: "dark",
             items: [
                 // {
                 //     type: "docSidebar",
