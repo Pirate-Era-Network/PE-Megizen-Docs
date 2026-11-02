@@ -1,0 +1,39 @@
+---
+sidebar_custom_props:
+    description: Tells mythic mobs to follow a path of locations.
+---
+
+# `mythicpath`
+
+```js
+mythicpath mobs:<mythicmob>|... path:<location>|... (tolerance:<#.#>) (speed:<#.#>) (duration:<#.#>) (timeoutdistance:<#.#>) (timeouttime:<#.#>)
+```
+
+Tells one or more Mythic mobs to follow a path of locations.
+
+`mobs` is a list of `MythicMobsMobTag`. It does not need a prefix. `path` is a list of locations and needs the `path` prefix. Omitted optional keys are left off the Mythic mechanic, so Mythic uses its own default for that key.
+
+`tolerance` is how close the mob must be to a point before that point counts as reached. `speed` is the movement speed multiplier. `duration` is the maximum time in ticks. `timeoutdistance` teleports the mob to the next point when the mob is farther away than this. `timeouttime` teleports the mob to the next point when the mob has not arrived within this many ticks.
+
+## Arguments
+
+| Argument        | Input                      | Required | Default | Description                                                          |
+| --------------- | -------------------------- | -------- | ------- | -------------------------------------------------------------------- |
+| mobs            | ListTag(MythicMobsMobTag)  | yes      |         | The mobs that should walk the path.                                  |
+| path            | ListTag(LocationTag)       | yes      |         | Locations to follow, in order.                                       |
+| tolerance       | ElementTag(Decimal)        | no       |         | How close the mob must get to a point.                               |
+| speed           | ElementTag(Decimal)        | no       |         | Speed multiplier.                                                    |
+| duration        | ElementTag(Number)         | no       |         | Maximum duration in ticks.                                           |
+| timeoutdistance | ElementTag(Decimal)        | no       |         | Teleport when the mob is farther than this from the next point.      |
+| timeouttime     | ElementTag(Number)         | no       |         | Teleport when the next point takes longer than this many ticks.      |
+
+## Examples
+
+```yml
+# Walk to the player, then back to the mob, at speed 2.
+- mythicpath <player.target.mythicmob> path:<player.location>|<player.target.location> speed:2
+```
+
+## See Also
+
+- Tags: <a href="/PE-Megizen-Docs/tags"> `MythicMobsMobTag`</a>

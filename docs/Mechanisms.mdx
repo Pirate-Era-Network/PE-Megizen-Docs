@@ -18,5 +18,82 @@ sidebar_custom_props:
             </>
         }
     />
-    
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.faction`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>ElementTag</code> }
+        Description = {
+            <>
+                Sets the Mythic mob's faction.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.owner`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>EntityTag</code> }
+        Description = {
+            <>
+                Sets the Mythic mob's owner to that entity's UUID. Use <code>remove</code> to clear the owner.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.parent`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>EntityTag</code> }
+        Description = {
+            <>
+                Sets the Mythic mob's parent. Use <code>remove</code> to clear it. A player is stored as Mythic player data. Any other living entity is set only when that entity is an active Mythic mob.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.ai_goals`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>ListTag</code> }
+        Description = {
+            <>
+                Adds AI goal lines on the mob type, then applies that list to the entity. A <code>clear</code> entry wipes the current lines and keeps <code>clear</code> plus every line after it.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.ai_targets`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>ListTag</code> }
+        Description = {
+            <>
+                Adds AI target lines on the mob type, then applies that list to the entity. A <code>clear</code> entry wipes the current lines and keeps <code>clear</code> plus every line after it.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.despawn_mode`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>ElementTag</code> }
+        Description = {
+            <>
+                Sets the despawn mode. Names are <code>normal</code>, <code>chunk</code>, <code>never</code>, <code>persistent</code>, and <code>npc</code>.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Mechanism: `MythicMobsMobTag.pathfinding_malus`
+    </EntryHeader>
+    <DetailsTable
+        Input = { <code>MapTag or ListTag</code> }
+        Description = {
+            <>
+                Sets pathfinding malus values on the mob. A map sets one float per key, and the key is the malus name. A list of two values sets one malus: the name, then the float.
+                <pre><code>{`- adjust <[mob]> pathfinding_malus:<map[open=0.5].with[water].as[-1]>\n- adjust <[mob]> pathfinding_malus:open|0.5`}</code></pre>
+            </>
+        }
+    />
 </MetaEntry>
