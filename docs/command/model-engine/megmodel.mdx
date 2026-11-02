@@ -1,4 +1,6 @@
 ---
+slug: /command/megmodel
+sidebar_position: 1
 sidebar_custom_props:
     description: Applies/removes a model to/from an entity.
 ---
@@ -11,7 +13,7 @@ megmodel [entity:<modeled_entity>] [model:<model>] (remove)
 
 Applies/removes a model to/from an entity.
 
-If specifying a player as the entity: should the player disconnect, the model will not persist and the player will sometimes become invisible. Use the <a href="/PE-Megizen-Docs/tags/#tag-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a> mechanism to make sure that the player, upon rejoining, is no longer invisible.
+If specifying a player as the entity: should the player disconnect, the model will not persist and the player will sometimes become invisible. Use the <a href="/PE-Megizen-Docs/mechanisms/model-engine#mechanism-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a> mechanism to make sure that the player, upon rejoining, is no longer invisible.
 
 Models do not persist across worlds. Before teleportation, they should be removed and then added back.
 
@@ -41,5 +43,5 @@ on zombie spawns:
 ## See Also
 
 - Object Type: <a href="/PE-Megizen-Docs/objecttype/MegModeledEntityTag"> `MegModeledEntityTag`</a>
-- Tag: <a href="/PE-Megizen-Docs/tags/#tag-playertagmeg_forced_invisible"> `PlayerTag.meg_forced_invisible`</a>
-- Mechanism: <a href="/PE-Megizen-Docs/tags/#tag-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a>
+- Tag: <a href="/PE-Megizen-Docs/tags/model-engine#tag-playertagmeg_forced_invisible"> `PlayerTag.meg_forced_invisible`</a>
+- Mechanism: <a href="/PE-Megizen-Docs/mechanisms/model-engine#mechanism-playertagmeg_make_visible"> `PlayerTag.meg_make_visible`</a>

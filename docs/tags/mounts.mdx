@@ -1,0 +1,81 @@
+---
+title: Mounts
+sidebar_position: 2
+sidebar_custom_props:
+    description: Pemount entities and the players riding them.
+---
+
+# Mounts
+
+Tags for a pemount entity and for the player driving or riding one.
+
+Settings on the mount itself stay on the `PEMountTag` page.
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `EntityTag.is_pe_mount`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the entity is a pemount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `EntityTag.pe_mount`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>PEMountTag</code>}
+        Description={
+            <>
+                Returns the PEMountTag of the entity when it is a pemount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.is_driver`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player is currently driving a mount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.is_passenger`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player is currently a passenger of a mount.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.mount`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>PEMountTag</code>}
+        Description={
+            <>
+                Returns the PEMountTag of the vehicle the player is riding.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.mount_entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>EntityTag</code>}
+        Description={
+            <>
+                Returns the entity of the vehicle the player is riding.
+            </>
+        }
+    />
+</MetaEntry>

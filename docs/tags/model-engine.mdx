@@ -1,0 +1,48 @@
+---
+title: Model Engine
+sidebar_position: 1
+sidebar_custom_props:
+    description: Modeled entities, mounted bones, and forced invisibility.
+---
+
+# Model Engine
+
+Tags for a modeled entity, the bone an entity is sitting on, and whether Model Engine has forced a player invisible.
+
+Tags that belong to `MegModeledEntityTag`, `MegActiveModelTag`, and `MegBoneTag` stay on those object pages.
+
+<MetaEntry>
+    <EntryHeader>
+    ### Tag: `EntityTag.modeled_entity`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegModeledEntityTag</code>}
+        Description={
+            <>
+                Returns the modeled entity of the entity, if any.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `EntityTag.mounted_bone`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>MegBoneTag</code>}
+        Description={
+            <>
+                Returns the MegBoneTag that the entity is mounted on, if any.
+            </>
+        }
+    />
+    <EntryHeader>
+    ### Tag: `PlayerTag.meg_forced_invisible`
+    </EntryHeader>
+    <DetailsTable
+        Returns={<code>ElementTag(Boolean)</code>}
+        Description={
+            <>
+                Returns whether the player has been forcefully turned invisible by either the megmodel command or by ModelEngine.
+            </>
+        }
+    />
+</MetaEntry>

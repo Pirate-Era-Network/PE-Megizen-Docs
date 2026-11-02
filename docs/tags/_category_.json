@@ -1,0 +1,10 @@
+{
+  "label": "Tags",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "Tags",
+    "description": "Extra tags, grouped by Model Engine, Mounts, and MythicMobs.",
+    "slug": "/tags"
+  }
+}

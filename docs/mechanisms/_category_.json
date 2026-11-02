@@ -1,0 +1,10 @@
+{
+  "label": "Mechanisms",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Mechanisms",
+    "description": "Extra mechanisms, grouped by Model Engine and MythicMobs.",
+    "slug": "/Mechanisms"
+  }
+}
