@@ -5,7 +5,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
     title: "PE-Megizen Docs",
     tagline: "Documentation for the Pirate Era build of Megizen.",
-    favicon: "img/favicon.ico",
+    favicon: "img/favicon.svg",
 
     // Set the production url of your site here
     url: "https://pirate-era-network.github.io",
@@ -52,7 +52,7 @@ const config: Config = {
 
     themeConfig: {
         // Replace with your project's social card
-        image: "img/docusaurus-social-card.jpg",
+        image: "img/logo.png",
         navbar: {
             title: "PE-Megizen Docs",
             items: [
